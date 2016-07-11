@@ -109,7 +109,7 @@ public class ReadTrans {
         String delimDate = "T";
         String[] tokens = str.split(delimDate);
 
-        String date = tokens[0];
+        String date = tokens[0].substring(1);
         System.out.println(date);
 
         String delimTime = "Z";
@@ -119,14 +119,15 @@ public class ReadTrans {
         edgeList.add(0, date);
         edgeList.add(1, time);
 
+//        changeFormat(date, time);
         System.out.println(edgeList.get(0) + "  " + edgeList.get(1));
-//        changeFormat(time, date);
 
     }
 
     private void changeFormat(String timeStr, String dateStr){
-        DateTimeFormatter timeFormat  = DateTimeFormatter.ofPattern(ISO_DATE_TIME.toString());
+        DateTimeFormatter timeFormat  = DateTimeFormatter.ofPattern(dateStr);
         Date date = (Date) timeFormat.parse(timeStr);
+        System.out.print("Date in ISO-DATE_TIME format ....\t" + date);
 
     }
 

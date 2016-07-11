@@ -6,12 +6,13 @@
 # I'll execute my programs, with the input directory venmo_input and output the files in the directory venmo_output
 # python ./src/rolling_median.py ./venmo_input/venmo-trans.txt ./venmo_output/output.txt
 
-# For this coding challenge Java is
+# For this coding challenge Java is chosen for source code
 
 # Compile all java classes
-javac -cp /Users/Nazli/Downloads/java-json.jar    ./src/*.java
+export CLASSPATH = $CLASSPATH "/Users/Nazli/Downloads/*.jar"
+javac  ./src/*.java
 
 
 echo "Finished compile ..."
 # Run main class
-java InsightPaymentGraph
+java ./out/InsightPaymentGraph
