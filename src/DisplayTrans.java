@@ -8,21 +8,21 @@ import java.util.Set;
  */
 public class DisplayTrans {
 
-    public void showSingle(HashMap<String[], String> hash, String[] entery) {
+    public void showSingle(HashMap<String, String[]> hash, String entery) {
 
         System.out.println("Requested transaction details: \n" +
-                            "Actor: " + hash.get(entery[0]) + "Target: " +  hash.get(entery[1]) +
-                            "Created_time: " + hash.get(entery) + "\n");
+                            "Actor-Target: " + hash.get(entery) +  " " +
+                            "Created_time: " + entery + "\n");
 
     }
 
-    public void showAll(HashMap<String[], String> transHash) {
+    public void showAll(HashMap<String, String[]> transHash) {
         System.out.println("Requested transaction details: \n");
-        Set<String[]> keys = transHash.keySet();
-        Iterator<String[]> itr = keys.iterator();
+        Set<String> keys = transHash.keySet();
+        Iterator<String> itr = keys.iterator();
         while (itr.hasNext()) {
-            System.out.println( "Actor-target: " + itr.next() + " " +
-                                "Created_time: " + transHash.get(itr) + "\n");
+            System.out.println( "Actor-target: " + transHash.get(itr) + " " +
+                                "Created_time: " + itr.next() + "\n");
         }
         System.out.println("");
 

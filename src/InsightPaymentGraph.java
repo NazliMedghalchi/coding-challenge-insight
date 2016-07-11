@@ -13,11 +13,15 @@ import java.util.*;
 public class InsightPaymentGraph {
 
 
+
     public static void main(String[] args){
 
         ReadTrans readTrans = new ReadTrans();
         try {
-            readTrans.read_file();
+            int openCode = readTrans.read_file();
+            if (openCode == 0){
+//                readTrans.paymentGraph();
+            }
 
         } catch (FileNotFoundException e) {
             e.printStackTrace();
