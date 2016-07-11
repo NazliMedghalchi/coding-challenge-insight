@@ -8,3 +8,5 @@ insight_testsuite/temp
 .idea/*
 *.idea/*
 *.iml
+
+out/*
