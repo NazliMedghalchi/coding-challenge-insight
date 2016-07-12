@@ -1,0 +1,2 @@
+List all extracted data with details: 
+actor= Lizzie-Friend,	target= Rachelmanning_,	created_time: 2016-03-29T06:04:49Z

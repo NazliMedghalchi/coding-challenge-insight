@@ -9,9 +9,8 @@
 # For this coding challenge Java is chosen for source code
 
 # Compile all java classes
-export CLASSPATH = $CLASSPATH "/Users/Nazli/Downloads/*.jar"
+#export CLASSPATH = $CLASSPATH "/Users/Nazli/Downloads/*.jar"
 javac  ./src/*.java
-
 
 echo "Finished compile ..."
 # Run main class
